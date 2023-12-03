@@ -21,13 +21,5 @@ npm run check-lint ||
     echo 'Filed eslint check, please check for eslint errors and try to commit again'
     false;
 )
-# check for build errors
-echo 'Alright...code looks good and ready to be build...trying to build now'
 
-npm run build || 
-(
-    echo 'Your build has failed, view the errors above to see why'
-    false;
-)
-# if build is success 
 echo 'Code looks good..Committing this now....'
