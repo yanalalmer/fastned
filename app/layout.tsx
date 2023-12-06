@@ -1,5 +1,6 @@
 import React from "react";
 import type { Metadata } from "next";
+// eslint-disable-next-line camelcase
 import { Plus_Jakarta_Sans } from "next/font/google";
 import "../styles/globals.css";
 
@@ -17,7 +18,9 @@ interface RootLayoutProps {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
-      <body className={jakarta.className}>{children}</body>
+      <body className={jakarta.className} suppressHydrationWarning={true}>
+        {children}
+      </body>
     </html>
   );
 }
